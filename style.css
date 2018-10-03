@@ -2354,3 +2354,17 @@ ul.tabs-nav .tab-nav.active {
     font-weight: 600;
     font-style: italic;
 }
+
+.znet-logo{
+    position: fixed;
+    bottom: 1%;
+    right: -2%;
+    height: 8%;
+    z-index: 10000;
+}
+
+@media screen and (max-width: 768px){
+    .znet-logo{
+        right: -5%;
+    }
+}
