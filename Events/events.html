@@ -29,6 +29,28 @@
     <meta name="theme-color" content="#ffffff">
     
     <style>
+
+#loader{
+    position: fixed;
+    z-index: 200;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    background: #030321;
+    font-family: Arial;
+    /* background: #fff; */
+    display: flex;
+    justify-content: center;
+    align-content: flex-end;
+    font-weight: 800;
+    }
+  html, body{
+    overflow-y:hidden !important;
+    height: 100%;
+    
+  }
+
         .se-pre-con {
             position: fixed;
             left: 0;
@@ -71,7 +93,9 @@
         </style>
     </noscript>
 </head>
-
+<script>
+        window.onload = function(){ document.getElementById("loader").style.display = "none"; }
+        </script>
 <body>
     <!-- <div id="white-loader"></div> -->
     <div id="loader">
@@ -88,7 +112,7 @@
                 <use xlink:href="#s-text" class="text-copy"></use>
                 </g>
             </svg>
-             <h2 style="color: aliceblue;">Relive The Reminiscence</h2> 
+             <!-- <h2 style="color: aliceblue;">Relive The Reminiscence</h2>  -->
             </div>
     <div id="lottie" ></div>
     <script src="scriptee0d.js?t=1558912575577"></script>
