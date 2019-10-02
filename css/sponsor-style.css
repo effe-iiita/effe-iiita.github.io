@@ -1,0 +1,326 @@
+
+nav ul img{
+    height: 80px;
+}
+
+html,body
+{
+    margin: 0;
+}
+
+body
+{
+    background-color:white;
+    font-size: 10px;
+    color:black !important;
+}
+
+
+nav ul
+    {
+        list-style: none;
+    }
+    
+    li
+    {
+        display: inline; 
+    }
+    
+    li a
+    {
+        text-decoration: none;
+        color: white;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    
+    li a:hover
+    {
+        text-decoration: underline;
+        color:white !important;
+    }
+
+    .heading
+    {
+        padding-top: 12.5%;
+        text-align: center;
+        font-size: 7em;
+        letter-spacing: 2px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+        color: white;
+    }
+
+@media screen and (max-width: 786px)
+{
+    ul
+    {
+        width: 100%;
+        padding: 40px 0;
+    }
+
+    li a{
+            display: none;
+    }
+
+    li:nth-child(1)
+    {
+        margin-left:  23.00%;
+    }
+
+    
+
+    nav ul img{
+        height: 100px;
+    }
+
+    .heading
+    {
+        margin: -50px 0 50px 0%;
+        text-align: center;
+        font-size: 5.5em;
+        letter-spacing: 2px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+    }
+
+    .row div
+    {
+        width: 65%;
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    .row div img
+    {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .row div p
+    {
+        font-family: 'Quicksand',sans-serif;
+        font-size: 1.8em;
+        margin-left: -15px;
+        margin-top: 0px;
+        font-weight: 400;
+        color: black;
+    }
+
+    .white
+    {
+        background-color: white; width: 100%; padding: 30px 20px 0px 20px; overflow: hidden; margin-top:10px;;
+    }
+    
+}
+    
+
+@media screen and (min-width: 768px )
+{
+    
+    
+    nav li:nth-child(1)
+    {
+        float:left;
+        margin-top: 1%;
+    }
+    
+    nav li:nth-child(2)
+    {
+        float: right;
+        margin-top: 2%;
+        margin-right: 3.3%;
+        font-size: 1.6em;
+    }
+    
+    .heading
+    {
+        padding-top: 12.5%;
+        text-align: center;
+        font-size: 7em;
+        letter-spacing: 2px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+    }
+    
+    #r1
+    {
+       
+        text-align: center;
+        margin-top: 150px;
+        margin-bottom: 150px;
+    }
+    
+    .row div
+    {
+        height: 225px;
+    }
+    
+    .row img
+    {
+        max-height: 100%;
+    }
+    
+    .row div{
+        text-align: center;
+    }
+    
+    .row div h3{
+        margin-top: 40px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 2.2em;
+        margin-left: -15px;
+        margin-bottom: 0px;
+        font-weight: 700;
+        color: black;
+    }
+    
+    .row div p
+    {
+        font-family: 'Quicksand',sans-serif;
+        font-size: 1.8em;
+        margin-left: -15px;
+        margin-top: 0px;
+        font-weight: 400;
+        color: black;
+        opacity: 0.6;
+    }
+    
+    #r2
+    {
+       
+        margin-top: 130px;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    
+    #r2 .col-md-6.col-sm-12
+    {
+        display: inline;
+        margin-left: 0px;
+    }
+    
+    #short1
+    {
+        height: 130px;
+        margin-top: 20px;
+    }
+    
+    #short2
+    {
+        height: 140px;
+    }
+    
+    #short3
+    {
+        height: 160px;
+    }
+
+    .white
+    {
+        background-color: white; height: 150px; width: 55%; margin-left: 25%; padding-top: 30px; overflow: hidden;
+    }
+    
+    #r3
+    {
+        margin: 180px 2% 100px 2%;
+    }
+    
+    #short4
+    {
+        height: 140px;
+    }
+
+    #short5
+    {
+        margin-top: -5%;
+    }
+
+    #r2:nth-child(2)
+    {
+        margin-top: 220px;
+    }
+    
+    .lensfit
+    {
+        margin-top: 1.75%;
+    }
+
+    .ohio
+    {
+        margin-top: 2%;
+    }
+
+   
+    
+}
+
+.home
+{
+    background-color: black;
+    height: 650px;
+}
+
+@media screen and (max-width: 574px)
+{
+    .home
+    {
+    background-color: #333;
+    height: 400px;
+    }
+
+    .heading p
+    {
+    margin-top: 3%;
+    }
+
+    #footer
+    {
+    height: 150px;
+    background-color: black;
+    text-align: center;
+    padding-top: 10%;
+    }
+
+    #footer a
+    {
+        color: white;
+        font-size: 2.4em;
+    }
+    
+    #sponsor
+    {
+        margin-top: 40px;
+        margin-bottom: 70px;
+    }
+
+    .row div
+    {
+        margin-left: 19%;
+    }
+
+}
+
+.heading p
+{
+    margin-top: 5%;
+}
+
+
+@media screen and (min-width: 574px)
+{
+    #footer
+    {
+        display: none;
+    }
+}
+
+.row
+{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+
+
+
