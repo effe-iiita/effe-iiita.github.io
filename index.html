@@ -989,9 +989,9 @@ window.onload = function(){ document.getElementById("loader").style.display = "n
                   <div class="input-group">
                     <select name="gender" id="single">
                       <option disabled="disabled" selected="selected">Gender</option>
-                      <option value="male">Male</option>
-                      <option value="female">Female</option>
-                      <option value="other">Other</option>
+                      <option value="male">MALE</option>
+                      <option value="female">FEMALE</option>
+                      <option value="other">OTHER</option>
                     </select>
                   </div>
                   <div class="input-group">
@@ -1325,6 +1325,8 @@ window.onload = function(){ document.getElementById("loader").style.display = "n
           success: function(data3) {
               
               var cook="auth="+data3.sessionId;
+              // cook=cook+"; path=/; domain=.thecollegefever.com/v1/booking/bookticket;";
+             
               document.cookie = cook;
               
               var name=$("#name").val();
@@ -1334,7 +1336,9 @@ window.onload = function(){ document.getElementById("loader").style.display = "n
               var gender=$('#single').find(":selected").text();
               
               var data='"attendees":[{"name":"'+name+'","email":"'+email+'","phone":"'+phone+'","college":"'+college+'","sex":"'+gender+'","extraInfoValue":"" }]';
-              var data2='{"eventId":6345,"totalFare":2900,"addExtra":0,"attendingEvents":[{"programId":17344,"programName":"Effervescence","subProgramName":"Day 1 (EDM NIGHT & KAVYOM) PASS","fare":500,'+data+'},{"programId":17345,"programName":"Effervescence","subProgramName":"DAY 2 (ROCK NIGHT & HUMOUR NIGHT) PASS","fare":600,'+data+'},{"programId":17346,"programName":"Effervescence","subProgramName":"DAY 3(CELEBRITY NIGHT) PASS","fare":800,'+data+'},{"programId":17347,"programName":"Effervescence","subProgramName":"3 DAY PASS(EDM,KAVYOM,HUMOUR NIGHT,ROCK NIGHT,CELEBRITY NIGHT)","fare":1000,'+data+'}]}';
+              var data2='{"eventId":6364,"totalFare":1000,"addExtra":0,"attendingEvents":[{"programId":17437,"programName":"Effervescence\'19","subProgramName":"Overall Fest Pass","fare":1000,'+ data +'}]}';
+            
+
               $.ajax({
                 type: "POST",
                 url: "https://www.thecollegefever.com/v1/booking/bookticket",
@@ -1342,20 +1346,22 @@ window.onload = function(){ document.getElementById("loader").style.display = "n
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
                 xhrFields: {
-                    withCredentials: true
+                withCredentials: true
                 },
                 crossDomain: true,
                 beforeSend: function(xhr) {
-                xhr.setRequestHeader("Cookie", cook);
+                      xhr.setRequestHeader("Cookie", cook);
                 },
                 success: function(data4) {
-                    console.log(data4);
-                    //in response to the second request, you will get payment URL where you can redirect your attendee to complete the payment.
+                  var url=data4.pgUrl;
+                  var redirect="https://www.thecollegefever.com"+url;
+                  window.location=redirect;
                 },
-                error: function(data){
-                    alert("fail");
+                error: function (xhr) {
+                  alert(xhr.responseText);
                 }
             });
+
           },
           error: function(data){
               alert("fail");
