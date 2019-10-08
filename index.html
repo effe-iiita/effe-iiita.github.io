@@ -1,3 +1,5 @@
+
+
 <!doctype html>
 
 
@@ -348,7 +350,7 @@ window.onload = function(){ document.getElementById("loader").style.display = "n
               <a  style="font-family: 'Montserrat', sans-serif;" class="nav-link" href="./team.html">Team</a>
             </li>
           <li class="nav-item" style="margin:10px">
-              <a  style="font-family: 'Montserrat', sans-serif;" class="nav-link" href="#register">Register</a>
+              <a  style="font-family: 'Montserrat', sans-serif;" class="nav-link" href="https://www.thecollegefever.com/events/effervescence19">Book Tickets</a>
             </li>
           <li class="nav-item" style="margin:10px">
               <a  style="font-family: 'Montserrat', sans-serif;" class="nav-link" href="#contact">Contact</a>
@@ -671,8 +673,8 @@ window.onload = function(){ document.getElementById("loader").style.display = "n
           </div>
           <!-- Action button -->
           <div class="btns-action anim-3 text-right">
-            <a class="btn btn-outline-white btn-round" href="https://ca.effe.org.in/" target="_blank">
-              Register as CA
+            <a class="btn btn-outline-white btn-round" href="https://www.thecollegefever.com/events/effervescence19" target="_blank">
+              Book Tickets
             </a>
           </div>
         </div>
@@ -1176,7 +1178,7 @@ window.onload = function(){ document.getElementById("loader").style.display = "n
                       <p class="text-muted">Call: +(91)9560503984</p>
                     </div>
                     <div class="col-12 col-md-6 col-lg-6">
-                      <h4>Mohit Dhillion</h4>
+                      <h4>Mohit Dhillon</h4>
                       <p class="text-muted">Head Events and Management</p>
                       <p class="text-muted">Call: +(91)9413156113</p>
                     </div>
@@ -1310,7 +1312,7 @@ window.onload = function(){ document.getElementById("loader").style.display = "n
   </script>
 
   <!-- All API request -->
-  <script>
+  <!-- <script>
    
       $('#submitForm').click(function (){
         
@@ -1320,14 +1322,16 @@ window.onload = function(){ document.getElementById("loader").style.display = "n
           type: "POST",
           url: "https://www.thecollegefever.com/v1/auth/basiclogin",
           data:data,
+          // headers: { 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials' : 'true' }, 
           contentType: "application/json; charset=utf-8",
           dataType: "json",
           success: function(data3) {
               
               var cook="auth="+data3.sessionId;
               // cook=cook+"; path=/; domain=.thecollegefever.com/v1/booking/bookticket;";
-             
+            //  console.log(cook)
               document.cookie = cook;
+              // console.log(document.cookie)
               
               var name=$("#name").val();
               var phone=$('#phone').val();
@@ -1343,12 +1347,23 @@ window.onload = function(){ document.getElementById("loader").style.display = "n
                 type: "POST",
                 url: "https://www.thecollegefever.com/v1/booking/bookticket",
                 data: data2,
-                contentType: "application/json; charset=utf-8",
-                dataType: "json",
+                headers: { 
+                  contentType: "application/json; charset=utf-8",
+                  dataType: "json",
+                  'Access-Control-Allow-Origin': 'http://127.0.0.1:5501/index.html',
+                   'Access-Control-Allow-Credentials' : 'true', 
+      //             "Cache-Control": "no-cache",
+      //             "Cookie": document.cookie,
+      // // 'Cookie' : cookie,
+      // 'Authentication' : document.cookie,
+      'Access-Control-Allow-Headers': 'x-requested-with',
+                }, 
                 xhrFields: {
-                withCredentials: true
+                withCredentials: true,
+                Cookie : document.cookie
                 },
                 crossDomain: true,
+                // Access-Control-Allow-Credentials: true,
                 beforeSend: function(xhr) {
                       xhr.setRequestHeader("Cookie", cook);
                 },
@@ -1371,7 +1386,7 @@ window.onload = function(){ document.getElementById("loader").style.display = "n
 
       });
    
-  </script>
+  </script> -->
 </body>
 
 
